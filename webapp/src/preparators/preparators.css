@@ -1,0 +1,15 @@
+#preparators .row:nth-child(2n+1) {
+  background-color: #F1F1F1; }
+#preparators .row.top {
+  background-color: #2B2B2B;
+  font-weight: normal !important;
+  color: white; }
+  #preparators .row.top span {
+    font-size: 16px; }
+#preparators .row {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 12px 0;
+  border-bottom: 1px solid #CFCFCF; }
+
+/*# sourceMappingURL=preparators.css.map */
