@@ -15,6 +15,7 @@ exports.all_preparators = function(req, res) {
 
 
 exports.create_preparator = function(req, res) {
+    //var new_preparator = new Preparator(req.body);
     var new_preparator = new Preparator(req.body);
     new_preparator.save(function(err, task) {
         if (err)
