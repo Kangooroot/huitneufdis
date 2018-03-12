@@ -2,12 +2,12 @@
 
 module.exports = function(app) {
 
-    var product = require('../controllers/alertController');
+    var alert = require('../controllers/alertController');
 
     app.route('/alert')
-        .get(product.all_products)
-        .post(product.create_product);
+        .get(alert.all_alerts)
+        .post(alert.create_alert);
 
     app.route('/alert/:alertId')
-        .delete(product.delete_product);
+        .delete(alert.delete_alert);
 };

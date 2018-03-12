@@ -19,11 +19,6 @@ var schema = new Schema({
         Y: Number,
         height: Number,
         block: Number
-    },
-
-    alert: {
-        type: Boolean,
-        default: false
     }
 });
 

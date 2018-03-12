@@ -5,6 +5,7 @@ var express = require('express'),
     Order = require('./api/models/orderModel'), // MODELS
     Preparator = require('./api/models/preparatorModel'),
     Product = require('./api/models/productModel'),
+    Alert = require('./api/models/alertModel'),
     bodyParser = require('body-parser');
 
 // mongoose instance connection url connection
@@ -19,6 +20,7 @@ app.use(bodyParser.json());
 require('./api/routes/orderRoutes')(app); //importing routes
 require('./api/routes/preparatorRoutes')(app);
 require('./api/routes/productRoutes')(app);
+require('./api/routes/alertRoutes')(app);
 
 
 app.listen(port);
