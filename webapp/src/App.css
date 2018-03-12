@@ -1,0 +1,91 @@
+html {
+  height: 100%; }
+  html body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    --MAIN_COLOR: #948667;
+    --HOVER_COLOR: #796C50;
+    font-family: "Roboto", sans-serif; }
+    html body #root {
+      height: 100%; }
+      html body #root h1 {
+        font-size: 24px;
+        padding: 20px 0;
+        border-bottom: 3px solid black; }
+      html body #root a {
+        text-decoration: none !important; }
+      html body #root a:hover {
+        color: inherit; }
+      html body #root button,
+      html body #root input[type="submit"] {
+        transition: all 0.2s;
+        border: 2px solid var(--MAIN_COLOR);
+        background-color: var(--MAIN_COLOR);
+        color: white;
+        font-weight: bold;
+        padding: 3px 6px;
+        border-radius: 3px; }
+      html body #root button:hover,
+      html body #root input[type="submit"]:hover {
+        background-color: white;
+        color: var(--MAIN_COLOR); }
+      html body #root button:focus,
+      html body #root input[type="submit"]:focus {
+        animation: buttonClick 0.5s;
+        border-color: var(--MAIN_COLOR);
+        background-color: var(--MAIN_COLOR);
+        color: white; }
+@keyframes buttonClick {
+  0% {
+    border-color: var(--MAIN_COLOR);
+    background-color: white;
+    color: var(--MAIN_COLOR); }
+  10% {
+    background-color: var(--HOVER_COLOR);
+    border-color: var(--HOVER_COLOR);
+    color: white; }
+  100% {
+    border-color: var(--MAIN_COLOR);
+    background-color: var(--MAIN_COLOR);
+    color: white; } }
+      html body #root nav {
+        background-color: var(--MAIN_COLOR); }
+        html body #root nav a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          font-family: "Montserrat", sans-serif;
+          color: white;
+          padding: 15px;
+          font-size: 20px;
+          cursor: pointer;
+          font-weight: bold;
+          border: 2px solid var(--HOVER_COLOR);
+          border-top-width: 12px;
+          border-bottom-width: 12px;
+          transition: background-color 0.1s; }
+          html body #root nav a span {
+            font-size: 30px;
+            margin-bottom: 15px; }
+        html body #root nav a:hover {
+          background-color: var(--HOVER_COLOR);
+          color: white; }
+        html body #root nav a.active {
+          background-color: var(--HOVER_COLOR);
+          color: white; }
+      html body #root footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse; }
+        html body #root footer .notif {
+          font-size: 15px;
+          text-align: center;
+          padding: 15px;
+          border-radius: 6px; }
+
+/*# sourceMappingURL=App.css.map */

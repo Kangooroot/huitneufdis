@@ -1,3 +1,48 @@
-
+#alerts h1 {
+  display: flex;
+  justify-content: center; }
+#alerts .alert {
+  display: flex;
+  background-color: #FBFBFB;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-bottom: 2px solid #C1C1C1; }
+  #alerts .alert > div {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  #alerts .alert .timer {
+    color: #EB6C7A;
+    font-size: 18px; }
+    #alerts .alert .timer .text {
+      margin-left: 15px;
+      font-weight: bold; }
+  #alerts .alert .product {
+    font-weight: bold;
+    font-size: 18px; }
+  #alerts .alert .preparator {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #3D3D3D; }
+  #alerts .alert .quantity {
+    font-size: 18px;
+    font-weight: bold;
+    color: #575757; }
+    #alerts .alert .quantity .value {
+      color: #A20004; }
+  #alerts .alert .ok {
+    display: flex; }
+    #alerts .alert .ok input[type="text"] {
+      border: 3px solid var(--MAIN_COLOR);
+      width: 80px;
+      margin-right: 10px;
+      padding: 2px 10px !important;
+      border-radius: 4px;
+      font-size: 20px; }
+    #alerts .alert .ok button {
+      padding: 5px 10px !important;
+      height: 100%; }
 
 /*# sourceMappingURL=alerts.css.map */

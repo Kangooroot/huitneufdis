@@ -2,8 +2,7 @@
 //import './App.css';
 
 import React, { Component } from 'react';
-import API from  './API'
-import './global.css';
+import './App.css';
 import Home from './home/Home'
 import Orders from './orders/Orders'
 import Alerts from './alerts/Alerts'
@@ -40,17 +39,16 @@ class App extends Component {
                         </Link>
                     </nav>
                 </header>
+                <footer>
+
+                </footer>
                 <Switch>
                     <Route exact path='/'       component={Home}/>
                     <Route path='/commandes'    component={Orders}/>
                     <Route path='/alertes'      component={Alerts}/>
-                    {/*<Route path='/preparateurs' render={(routeProps) => (
-                        <Preparators promise={promise}/>
-                    )}/>*/}
                     <Route path='/preparateurs' component={Preparators}/>
                     <Route path='/init'         component={Initialisation}/>
                 </Switch>
-
             </div>
         );
     }

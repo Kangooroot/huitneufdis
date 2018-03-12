@@ -17,7 +17,7 @@ class API {
 
     static _POST(path, params) {
 
-        fetch(path, {
+        return fetch(API.REST_API_URL + path, {
             method: "POST",
             headers: {
                 'Accept': 'application/json',
@@ -26,13 +26,28 @@ class API {
             body: JSON.stringify(params)
         })
         .then((response) => {
+            console.log(response);
             return response.json()
         });
     }
 
-    static newProduct() {
+    static _PUT(path, params) {
 
+        return fetch(API.REST_API_URL + path, {
+            method: "PUT",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(params)
+        });
+    }
 
+    static _DELETE(path, params) {
+        console.log(API.REST_API_URL + path);
+        return fetch(API.REST_API_URL + path, {
+            method: "DELETE"
+        });
     }
 }
 

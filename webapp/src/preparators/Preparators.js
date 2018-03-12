@@ -1,7 +1,6 @@
 //import $ from 'jquery';
 import React, { Component } from 'react';
 import './preparators.css';
-import ASync from 'react-promise'
 import API from  '../API'
 
 export default class Preparators extends Component {
