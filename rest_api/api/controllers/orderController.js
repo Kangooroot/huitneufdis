@@ -6,7 +6,12 @@ var mongoose = require('mongoose'),
 
 
 exports.all_orders = function(req, res) {
-    Order.find({}, function(err, task) {
+    /*Order.find({}, function(err, task) {
+        if (err)
+            res.send(err);
+        res.json(task);
+    });*/
+    Order.find().populate("preparator").populate("products").exec(function(err, task) {
         if (err)
             res.send(err);
         res.json(task);

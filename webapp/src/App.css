@@ -12,7 +12,7 @@ html {
       html body #root h1 {
         font-size: 24px;
         padding: 20px 0;
-        border-bottom: 3px solid black; }
+        border-bottom: 5px solid var(--MAIN_COLOR); }
       html body #root a {
         text-decoration: none !important; }
       html body #root a:hover {

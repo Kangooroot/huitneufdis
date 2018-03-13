@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAEC,UAAG;EACF,OAAO,EAAC,IAAI;EACZ,eAAe,EAAC,MAAM",
+"sources": ["orders.scss"],
 "names": [],
 "file": "orders.css"
 }

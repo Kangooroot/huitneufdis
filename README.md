@@ -1,11 +1,12 @@
+
+    Createurs : DRISSI Rémi - LETOURNEUR Antoine
+
 # Application HuitNeufDis
 
-	Université d'Avignon et Pays du Vaucluse
-	Centre d'Enseignement et de Recherche en Informatique
-	Master 2 - ILSEN 2018
+Université d'Avignon et Pays du Vaucluse
+Centre d'Enseignement et de Recherche en Informatique
+Master 2 - ILSEN 2018
 
-	DRISSI Rémi
-	LETOURNEUR Antoine
 
 # Applicatif Web : React.js
 

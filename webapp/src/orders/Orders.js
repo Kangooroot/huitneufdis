@@ -1,55 +1,82 @@
 //import $ from 'jquery';
 import React, { Component } from 'react';
 import './orders.css';
+import API from  '../API'
+import Timer from '../Timer'
 
 export default class Orders extends Component {
 
     constructor(props){
         super(props);
         this.state = {
-            preparators: []
+            orders: []
         };
     }
 
-    fetchData() {
+    refreshContent() {
 
-        fetch('http://localhost:3001/order/')
-            .then((results) => {
-                return results.json();
-            })
-            .then((json) => {
+        var promise = API._GET("order/");
 
-                let preparators = json.map((item) => {
+        var self = this;
 
-                    return (
-                        <div className="row" key={item._id}>
-                            <div className="col-lg-4">{ item.name }</div>
-                            <div className="col-lg-4">{ item.email }</div>
-                            <div className="col-lg-4">{ item.maxWeight }</div>
-                        </div>
-                    )
-                });
+        promise.then((json) => {
 
-                this.setState({preparators: preparators});
+            self.setState({orders: json});
 
-                console.log("state", this.state.preparators);
-            });
+            setInterval(self.refreshContent(), 1000);
+
+        }).catch((error) => {
+            console.log(error);
+        });
     }
 
     componentDidMount() {
 
-        this.fetchData();
+        this.refreshContent();
+    }
+
+    getDateDifference(date) {
+
+        let created_date = new Date(date);
+        let diff = Math.abs((new Date()).getTime() - created_date.getTime());
+
+        let seconds = parseInt((diff/1000)%60, 10)
+            , minutes = parseInt((diff/(1000*60))%60, 10)
+            , hours = parseInt((diff/(1000*60*60))%24, 10);
+
+        hours = (hours < 10) ? "0" + hours : hours;
+        minutes = (minutes < 10) ? "0" + minutes : minutes;
+        seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+        return hours + ':' + minutes + ':' + seconds;
     }
 
     render() {
         return (
-            <div id="preparators" className="container-fluid">
-                <div className="row top">
-                    <div className="col-lg-4"><span className="glyphicon glyphicon-user">&nbsp;</span>Nom</div>
-                    <div className="col-lg-4"><span className="glyphicon glyphicon-pencil">&nbsp;</span>Adresse e-mail</div>
-                    <div className="col-lg-4"><span className="glyphicon glyphicon-briefcase">&nbsp;</span>Poids maximal supporté (Kg)</div>
-                </div>
-                { this.state.preparators }
+            <div id="orders" className="container-fluid">
+                <h1 className="row">
+                    <span className="glyphicon glyphicon-list-alt">&nbsp;</span>
+                    Commandes
+                </h1>
+                {
+                    this.state.orders.map((item) => {
+
+                        return (
+                            <div className="row col-lg-offset-1 col-lg-10 order" key={item._id}>
+
+                                <div className="col-lg-12 id">{item._id}</div>
+
+                                <div className="col-lg-6 preparator">{item.preparator.name}</div>
+
+                                <Timer date={item.created_date}/>
+
+                                <div className="col-lg-12 jauge">
+                                    <span className="progression"></span>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
             </div>
         );
     }
