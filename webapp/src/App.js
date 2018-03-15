@@ -8,7 +8,9 @@ import Orders from './orders/Orders'
 import Alerts from './alerts/Alerts'
 import Preparators from './preparators/Preparators'
 import Initialisation from './autoFill/initialisation'
-import Automation from './autoFill/Automation'
+import CreateProducts from './autoFill/CreateProducts'
+import CreateOrders from './autoFill/CreateOrders'
+import CreateGroups from './autoFill/CreateGroups'
 import { Switch, Route, Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
 
@@ -47,12 +49,14 @@ class App extends Component {
 
                 </footer>
                 <Switch>
-                    <Route exact path='/'       component={Home}/>
-                    <Route path='/commandes'    component={Orders}/>
-                    <Route path='/alertes'      component={Alerts}/>
-                    <Route path='/preparateurs' component={Preparators}/>
-                    <Route path='/init'         component={Initialisation}/>
-                    <Route path='/auto'         component={Automation}/>
+                    <Route exact path='/'           component={Home}/>
+                    <Route path='/commandes'        component={Orders}/>
+                    <Route path='/alertes'          component={Alerts}/>
+                    <Route path='/preparateurs'     component={Preparators}/>
+                    <Route path='/init'             component={Initialisation}/>
+                    <Route path='/auto/produits'    component={CreateProducts}/>
+                    <Route path='/auto/commandes'   component={CreateOrders}/>
+                    <Route path='/auto/groupements' component={CreateGroups}/>
                 </Switch>
             </div>
         );

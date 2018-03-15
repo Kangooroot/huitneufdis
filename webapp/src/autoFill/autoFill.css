@@ -1,0 +1,16 @@
+#auto {
+  margin-top: 60px; }
+  #auto h3 {
+    font-size: 15px; }
+  #auto form {
+    display: flex;
+    align-items: stretch; }
+    #auto form select {
+      padding: 10px;
+      font-size: 20px;
+      border: 2px solid var(--MAIN_COLOR); }
+    #auto form input[type="submit"] {
+      margin-left: 10px;
+      width: 100px; }
+
+/*# sourceMappingURL=autoFill.css.map */

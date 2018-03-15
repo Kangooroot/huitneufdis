@@ -7,7 +7,10 @@ var schema = new Schema({
 
     products: [
         {
-            id: {type: Schema.Types.ObjectId, ref: 'Product'},
+            product: {
+                type: Schema.Types.ObjectId,
+                ref: 'Product'
+            },
             scanned: {
                 type: Boolean,
                 default: false
@@ -27,7 +30,7 @@ var schema = new Schema({
     preparator: {
         type: Schema.Types.ObjectId,
         ref: 'Preparator',
-        default: "none"
+        default: null
     }
 });
 

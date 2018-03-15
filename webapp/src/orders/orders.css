@@ -1,5 +1,77 @@
 #orders h1 {
   display: flex;
   justify-content: center; }
+#orders .order {
+  padding: 15px;
+  border: 1px solid #E9E9E9;
+  margin-top: 20px;
+  box-shadow: 0 0 3px 1px #A2A2A2; }
+  #orders .order .row.first {
+    border-bottom: 3px solid var(--MAIN_COLOR); }
+    #orders .order .row.first > div {
+      padding-bottom: 15px; }
+  #orders .order .row.second {
+    margin-top: 20px; }
+  #orders .order .id {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: bold;
+    font-size: 20px; }
+    #orders .order .id span {
+      color: #B1B1B1; }
+  #orders .order .timer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--MAIN_COLOR); }
+    #orders .order .timer span.glyphicon {
+      margin-right: 6px; }
+  #orders .order .deploy button {
+    position: relative; }
+  #orders .order .deploy .indicator {
+    margin-left: 10px; }
+    #orders .order .deploy .indicator .glyphicon {
+      transition: transform 0.5s ease; }
+  #orders .order .deploy .indicator.active .glyphicon {
+    transform: rotate(90deg); }
+  #orders .order .preparator {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--MAIN_COLOR); }
+    #orders .order .preparator .glyphicon {
+      font-size: 15px; }
+  #orders .order .preparator.none {
+    font-size: 13px;
+    color: #8B8B8B; }
+    #orders .order .preparator.none .glyphicon {
+      display: none; }
+  #orders .order .productList {
+    font-size: 12px;
+    font-weight: bold;
+    display: none; }
+    #orders .order .productList .row.top {
+      font-weight: bold;
+      color: var(--MAIN_COLOR);
+      padding: 10px auto;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    #orders .order .productList .scanned .glyphicon {
+      margin-right: 4px; }
+    #orders .order .productList .scanned .glyphicon-ok-sign {
+      color: #5DB300; }
+      #orders .order .productList .scanned .glyphicon-ok-sign ~ .text {
+        color: #5DB300; }
+    #orders .order .productList .scanned .glyphicon-remove-sign {
+      color: #7A7A7A; }
+      #orders .order .productList .scanned .glyphicon-remove-sign ~ .text {
+        color: #979797; }
+  #orders .order .productList.active {
+    display: block; }
+#orders .order:last-child {
+  margin-bottom: 30px; }
 
 /*# sourceMappingURL=orders.css.map */

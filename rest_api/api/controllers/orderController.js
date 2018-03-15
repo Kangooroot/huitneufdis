@@ -11,9 +11,13 @@ exports.all_orders = function(req, res) {
             res.send(err);
         res.json(task);
     });*/
-    Order.find().populate("preparator").populate("products").exec(function(err, task) {
+    Order.find()
+    .populate("preparator")
+    .populate("products.product")
+    .exec(function(err, task) {
         if (err)
             res.send(err);
+
         res.json(task);
     });
 };

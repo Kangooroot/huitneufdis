@@ -1,0 +1,27 @@
+
+
+#auto {
+
+	margin-top:60px;
+
+	h3 {
+		font-size:15px;
+	}
+
+	form {
+		display:flex;
+		align-items:stretch;
+
+		select {
+			padding:10px;
+			font-size:20px;
+			border:2px solid var(--MAIN_COLOR)
+		}
+		input[type="submit"] {
+			margin-left:10px;
+			width:100px;
+		}
+	}
+
+
+}

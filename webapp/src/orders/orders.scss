@@ -4,4 +4,128 @@
 		display:flex;
 		justify-content:center;
 	}
+
+	.order {
+
+		padding:15px;
+		border:1px solid #E9E9E9;
+		margin-top:20px;
+		box-shadow: 0 0 3px 1px #A2A2A2;
+
+		.row.first {
+			border-bottom:3px solid var(--MAIN_COLOR);
+			> div {
+				padding-bottom:15px;
+			}
+		}
+		.row.second {
+			margin-top:20px;
+		}
+
+		.id {
+			font-family:"PT Sans Narrow", sans-serif;
+			font-weight:bold;
+			font-size:20px;
+			span {
+				color:#B1B1B1;
+			}
+		}
+		.timer {
+
+			display:flex;
+			justify-content:flex-end;
+			align-items:center;
+			font-weight:bold;
+			font-size:18px;
+			color:var(--MAIN_COLOR);
+
+			span.glyphicon {
+				margin-right:6px;
+			}
+		}
+
+		.deploy {
+
+			button {
+				position:relative;
+			}
+
+			.indicator {
+				margin-left:10px;
+				.glyphicon {
+					transition: transform 0.5s ease;
+				}
+			}
+
+			.indicator.active .glyphicon {
+				transform: rotate(90deg);
+			}
+		}
+
+
+		.preparator {
+			display:flex;
+			justify-content:flex-end;
+			align-items:center;
+			font-weight:bold;
+			font-size:18px;
+			color:var(--MAIN_COLOR);
+
+			.glyphicon {
+				font-size:15px;
+			}
+		}
+
+		.preparator.none {
+			font-size:13px;
+			color:#8B8B8B;
+			.glyphicon {
+				display:none;
+			}
+		}
+
+		.productList {
+
+			font-size:12px;
+			font-weight:bold;
+			display:none;
+
+			.row.top {
+				font-weight:bold;
+				color:var(--MAIN_COLOR);
+				padding:10px auto;
+				margin-top:10px;
+				margin-bottom:10px;
+			}
+
+			.scanned {
+
+				.glyphicon {
+					margin-right:4px;
+				}
+
+				.glyphicon-ok-sign {
+					color:#5DB300;
+					~.text {
+						color:#5DB300;
+					}
+				}
+
+				.glyphicon-remove-sign {
+					color:#7A7A7A;
+					~.text {
+						color:#979797;
+					}
+				}
+			}
+		}
+
+		.productList.active {
+			display:block;
+		}
+	}
+
+	.order:last-child {
+		margin-bottom:30px;
+	}
 }

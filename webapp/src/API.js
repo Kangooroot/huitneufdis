@@ -24,10 +24,6 @@ class API {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(params)
-        })
-        .then((response) => {
-            console.log(response);
-            return response.json()
         });
     }
 
